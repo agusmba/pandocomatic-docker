@@ -24,7 +24,7 @@ RUN curl -fLsS -o pandoc.deb https://github.com/jgm/pandoc/releases/download/${P
         && rm ./pandoc.deb
 
 # Not used except for triggering a build
-ENV PANDOCOMATIC_VERSION "0.2.0.2"
+ENV PANDOCOMATIC_VERSION "0.2.0.4"
 
 # Install pandocomatic
 RUN gem install pandocomatic
