@@ -11,6 +11,9 @@ ENV LANG C.UTF-8
 
 ENV PANDOC_VERSION "2.0"
 
+# DEB_PKG_REVISION will normally be "1"
+ENV DEB_PKG_REVISION "2"
+
 # Install requirements
 RUN apt-get update \
         && apt-get install -y --no-install-recommends \
@@ -19,7 +22,7 @@ RUN apt-get update \
         && rm -fr /var/lib/apt/lists/*
 
 # Install pandoc
-RUN curl -fLsS -o pandoc.deb https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb \
+RUN curl -fLsS -o pandoc.deb https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-${DEB_PKG_REVISION}-amd64.deb \
         && apt-get install ./pandoc.deb \
         && rm ./pandoc.deb
 
