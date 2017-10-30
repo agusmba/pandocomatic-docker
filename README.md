@@ -1,6 +1,6 @@
 # Pandoc & Pandocomatic Docker Image
 
-[Docker](https://www.docker.io/) image for converting docuements
+[Docker](https://www.docker.io/) [image](https://hub.docker.com/r/agusmba/pandocomatic/) for converting documents
 with [Pandoc](http://pandoc.org/) and [Pandocomatic](https://heerdebeer.org/Software/markdown/pandocomatic/).
 
 **NO LATEX** included in order to keep the image small.

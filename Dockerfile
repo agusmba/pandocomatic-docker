@@ -9,7 +9,7 @@ MAINTAINER Agustín Martín Barbero (ambarbero@ree.es)
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 ENV LANG C.UTF-8
 
-ENV PANDOC_VERSION "1.19.2.1"
+ENV PANDOC_VERSION "2.0"
 
 # Install requirements
 RUN apt-get update \
