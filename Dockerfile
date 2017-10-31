@@ -1,18 +1,19 @@
 # AMB: Dockerfile to create an image with pandoc, pandocomatic,
 #      and what's necessary for generating docx documents.
 # 2017/09/21: 0.1 Initial version
+# 2017/10/31: 0.2.0.4-pandoc-2.0.0.1 Now with Pandoc 2.0
 
 FROM ubuntu:zesty
-
-MAINTAINER Agustín Martín Barbero (ambarbero@ree.es)
 
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 ENV LANG C.UTF-8
 
-ENV PANDOC_VERSION "2.0"
+ENV PANDOC_VERSION="2.0.0.1" \
+    DEB_PKG_REVISION="1" \
+    PANDOCOMATIC_VERSION="0.2.0.4"
 
-# DEB_PKG_REVISION will normally be "1"
-ENV DEB_PKG_REVISION "2"
+LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
+      version="${PANDOCOMATIC_VERSION}-pandoc-${PANDOC_VERSION}"
 
 # Install requirements
 RUN apt-get update \
@@ -26,11 +27,8 @@ RUN curl -fLsS -o pandoc.deb https://github.com/jgm/pandoc/releases/download/${P
         && apt-get install ./pandoc.deb \
         && rm ./pandoc.deb
 
-# Not used except for triggering a build
-ENV PANDOCOMATIC_VERSION "0.2.0.4"
-
 # Install pandocomatic
-RUN gem install pandocomatic
+RUN gem install pandocomatic -v "=${PANDOCOMATIC_VERSION}"
 
 # Default dir
 WORKDIR /source
@@ -38,4 +36,4 @@ WORKDIR /source
 # Copy templates?
 
 # Default CMD
-CMD [ "pandocomatic" ]
+CMD [ "pandocomatic", "-v"]
