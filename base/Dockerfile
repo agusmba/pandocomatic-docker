@@ -7,7 +7,7 @@ FROM ubuntu:zesty
 ENV LANG C.UTF-8
 
 LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
-      version="${PANDOCOMATIC_VERSION}-pandoc-${PANDOC_VERSION}"
+      version="base-0.0.1"
 
 # Install requirements
 RUN apt-get update \
