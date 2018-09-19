@@ -6,9 +6,9 @@ FROM agusmba/pandoc-test:base-0.0.1
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 # ENV LANG C.UTF-8
 
-ENV PANDOC_VERSION="2.0.2" \
+ENV PANDOC_VERSION="2.3" \
     DEB_PKG_REVISION="1" \
-    PANDOCOMATIC_VERSION="0.2.0.4"
+    PANDOCOMATIC_VERSION="0.2.3.0"
 
 LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
       version="${PANDOCOMATIC_VERSION}-pandoc-${PANDOC_VERSION}"
