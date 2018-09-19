@@ -18,6 +18,14 @@ $ docker run --rm -it -v /local-source-dir:/source \
                       agusmba/pandocomatic bash
 ```
 
+Sample pandocomatic invokation from windows (notice the extra `/` at the beginning of local paths):
+
+```sh
+$ docker run --rm -it -v /$(pwd):/source \
+              -v /$(pwd)/res:/root/.pandoc \
+              agusmba/pandocomatic pandocomatic -i src/test-pandoc -o build
+```
+
 Other similar projects:
 
 * [pandoc-docker](https://github.com/jagregory/pandoc-docker)
