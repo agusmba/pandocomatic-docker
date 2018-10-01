@@ -1,13 +1,13 @@
 # AMB: Base Dockerfile to create an image with pandoc, pandocomatic,
 #      and what's necessary for generating docx documents.
 
-FROM ubuntu:zesty
+FROM ubuntu:latest
 
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 ENV LANG C.UTF-8
 
 LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
-      version="base-0.0.2"
+      version="base-0.0.3"
 
 # Install requirements
 RUN apt-get update \
