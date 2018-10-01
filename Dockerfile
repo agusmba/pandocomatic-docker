@@ -1,12 +1,12 @@
 # AMB: Dockerfile to create an image with pandoc, pandocomatic,
 #      and what's necessary for generating docx documents.
 
-FROM agusmba/pandoc-test:base-0.0.1
+FROM agusmba/pandocomatic:base-0.0.3
 
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 # ENV LANG C.UTF-8
 
-ENV PANDOC_VERSION="2.3" \
+ENV PANDOC_VERSION="2.3.1" \
     DEB_PKG_REVISION="1" \
     PANDOCOMATIC_VERSION="0.2.3.0"
 
