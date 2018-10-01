@@ -7,7 +7,7 @@ FROM ubuntu:zesty
 ENV LANG C.UTF-8
 
 LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
-      version="base-0.0.1"
+      version="base-0.0.2"
 
 # Install requirements
 RUN apt-get update \
