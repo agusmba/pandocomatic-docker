@@ -35,8 +35,8 @@ Other similar projects:
 
 * **latest**: Latest version with Pandocomatic and Pandoc (no latex)
 * **latest-tex**: Latest version with Pandocomatic and Pandoc, with latest TinyTex
-* **x.y.z-pandoc-a.b.c**: Pandocomatic version `x.y.z` and Pandoc version a.b.c
-* **x.y.z-pandoc-a.b.c-tex**: Pandocomatic version `x.y.z` and Pandoc version a.b.c, with latest TinyTex
+* **x.y.z-pandoc-a.b.c**: Pandocomatic version `x.y.z` and Pandoc version `a.b.c`
+* **x.y.z-pandoc-a.b.c-tex**: Pandocomatic version `x.y.z` and Pandoc version `a.b.c`, with latest TinyTex
 
 ## Troubleshooting
 
@@ -65,7 +65,7 @@ In order to find all extra latex packages to install, you may fire up the latest
 ```sh
 $ docker run --rm -it -v /local-source-dir:/source \
                       -v /home/username/.pandoc:/root/.pandoc \
-                      agusmba/pandocomatic bash
+                      agusmba/pandocomatic:latest-tex bash
 $ apt-get update
 $ apt-get install perl
 # repeat until no missing packages:
