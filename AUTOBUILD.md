@@ -2,6 +2,8 @@
 
 ## Docker Hub
 
+~Disabled~
+
 ## Docker Cloud
 
 | Source Type | Source        | Docker Tag          |
@@ -24,5 +26,5 @@ This [matches](https://regex101.com/r/7lEc16/2) anything in the form `[x.y][.z..
 Source:
 /^((?:[0-9]+)(?:\.[0-9]+)?)((?:\.[0-9]+)*)-(\S+)-((?:[0-9]+)(?:\.[0-9]+)?)((?:\.[0-9]+)*)-tex$/
 Tag:
-{\1}{\2}-{\3}-{\4}{\5}-tex,{\1}-{\3}-{\4}-tex,{\1}-tex
+latest-tex,{\1}{\2}-{\3}-{\4}{\5}-tex,{\1}-{\3}-{\4}-tex,{\1}-tex
 ```

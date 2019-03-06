@@ -8,7 +8,7 @@ FROM agusmba/pandocomatic:base-0.0.3
 
 ENV PANDOC_VERSION="2.7" \
     DEB_PKG_REVISION="1" \
-    PANDOCOMATIC_VERSION="0.2.4.0"
+    PANDOCOMATIC_VERSION="0.2.4.1"
 
 LABEL maintainer="Agustín Martín Barbero (ambarbero@ree.es)" \
       version="${PANDOCOMATIC_VERSION}-pandoc-${PANDOC_VERSION}"
