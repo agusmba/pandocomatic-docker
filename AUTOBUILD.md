@@ -4,6 +4,8 @@
 
 ~Disabled~
 
+It seems that docker hub will now support the docker cloud build configurations.
+
 ## Docker Cloud
 
 | Source Type | Source        | Docker Tag          |

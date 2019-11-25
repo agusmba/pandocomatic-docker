@@ -6,7 +6,7 @@ FROM agusmba/pandocomatic:base-0.0.3
 # utf problem with official ruby docker images. See https://oncletom.io/2015/docker-encoding/
 # ENV LANG C.UTF-8
 
-ENV PANDOC_VERSION="2.7.3" \
+ENV PANDOC_VERSION="2.8" \
     DEB_PKG_REVISION="1" \
     PANDOCOMATIC_VERSION="0.2.5.0"
 
